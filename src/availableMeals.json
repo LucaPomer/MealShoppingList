@@ -1,0 +1,18 @@
+{
+"mealsList": [
+    {
+        "name": "tomatoSoup",
+        "ingredients": [
+            "tomato",
+            "broth"
+        ]
+    },
+    {
+       "name": "pasta",
+       "ingredients" :[
+            "pasta",
+            "pasta sauce"
+        ]
+    }
+]
+}

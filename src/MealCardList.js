@@ -2,23 +2,42 @@ import React from 'react';
 
 class MealCardList extends React.Component {
 
-    constructor() {
-        super();
+
+    constructor(props) {
+        super(props);
+        const mealsJSON = require('./availableMeals.json');
         this.state = {
             color: "blue",
+            mealsList: mealsJSON.mealsList,
         }
     }
 
+    createMeal(index){
+        return(
+            <Meal
+                handleClickMeal = {()=>this.handleClickMeal(index)}
+                mealName={this.state.mealsList[index].name}
+            />
+        );
+    }
+
+    handleClickMeal(index){
+        const mealsJSON = require('./availableMeals.json');
+        const meals = this.state.mealsList;
+        let groceries = meals[index].ingredients;
+        alert(groceries);
+
+    }
+
     render() {
-        const allDishes = ["fish","pasta","soup"]
-        const meals = require('./availableMeals.json');
+
         return (
             <div className="mealCard">
                 <h1>MealCard in the color {this.state.color}</h1>
                 <ul>
-                    <Meal mealName={meals.mealsList[0].name}> </Meal>
-                    <Meal mealName ={allDishes[1]}> </Meal>
-                    <Meal mealName ={allDishes[2]}> </Meal>
+                    {this.createMeal(0)}
+                    {this.createMeal(1)}
+                    {this.createMeal(1)}
                 </ul>
 
             </div>
@@ -35,7 +54,7 @@ class Meal extends React.Component {
     render() {
         return (
             <div>
-                <h1> this meal is {this.props.mealName}</h1>
+                <button onClick={this.props.handleClickMeal}> this meal is {this.props.mealName}</button>
             </div>
         );
     }

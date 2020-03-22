@@ -12,17 +12,16 @@ class MealCardList extends React.Component {
         }
     }
 
-    createMeal(index){
-        return(
+    createMeal(index) {
+        return (
             <Meal
-                handleClickMeal = {()=>this.handleClickMeal(index)}
+                handleClickMeal={() => this.handleClickMeal(index)}
                 mealName={this.state.mealsList[index].name}
             />
         );
     }
 
-    handleClickMeal(index){
-        const mealsJSON = require('./availableMeals.json');
+    handleClickMeal(index) {
         const meals = this.state.mealsList;
         let groceries = meals[index].ingredients;
         alert(groceries);
@@ -48,9 +47,10 @@ class MealCardList extends React.Component {
 }
 
 class Meal extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
+
     render() {
         return (
             <div>

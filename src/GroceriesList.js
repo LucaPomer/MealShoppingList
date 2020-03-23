@@ -2,23 +2,22 @@
 import React from 'react';
 
 class GroceriesList extends React.Component{
+    listItems;
 constructor(props){
     super(props);
-    this.state={
-        listItems: ["tomato ","pasta"],
-    }
     this.addProduct("basilikum");
+    this.listItems=props.listItems;
 }
 addProduct(name){
-    let newList = this.state.listItems;
+    let newList = this.props.listItems;
     newList.concat(name);
-    this.setState({
-        listItems: newList
-    })
+   // this.setState({
+     //   listItems: newList
+   // })
 }
 
     render(){
-        const listItemsCopy = this.state.listItems.map((product) =>
+        const listItemsCopy = this.props.listItems.map((product) =>
             <Product name={product}></Product>
         );
 
@@ -27,7 +26,7 @@ addProduct(name){
                 <h1>Grocery List</h1>
                 <ul id={"productList"}>
                     <Product name={"test name"}/>
-                    {this.state.listItems}
+                    {this.props.listItems}
                 </ul>
             </div>
         )

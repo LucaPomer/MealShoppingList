@@ -7,7 +7,6 @@ class MealCardList extends React.Component {
         super(props);
         const mealsJSON = require('./availableMeals.json');
         this.state = {
-            color: "blue",
             mealsList: mealsJSON.mealsList,
         }
     }
@@ -32,7 +31,7 @@ class MealCardList extends React.Component {
 
         return (
             <div className="mealCard">
-                <h1>MealCard in the color {this.state.color}</h1>
+                <h1>MealCard in the </h1>
                 <ul>
                     {this.createMeal(0)}
                     {this.createMeal(1)}

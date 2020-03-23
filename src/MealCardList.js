@@ -2,30 +2,16 @@ import React from 'react';
 
 class MealCardList extends React.Component {
 
-
-    constructor(props) {
-        super(props);
-        const mealsJSON = require('./availableMeals.json');
-        this.state = {
-            mealsList: mealsJSON.mealsList,
-        }
-    }
-
     createMeal(index) {
         return (
             <Meal
-                handleClickMeal={() => this.handleClickMeal(index)}
-                mealName={this.state.mealsList[index].name}
+                handleClickMeal={() => this.props.handleClickMeal(index)}
+                mealName={this.props.mealsList[index].name}
             />
         );
     }
 
-    handleClickMeal(index) {
-        const meals = this.state.mealsList;
-        let groceries = meals[index].ingredients;
-        alert(groceries);
 
-    }
 
     render() {
 

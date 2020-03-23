@@ -5,15 +5,16 @@ class GroceriesList extends React.Component{
     listItems;
 constructor(props){
     super(props);
-    this.addProduct("basilikum");
     this.listItems=props.listItems;
+    window.listComponent = this;
 }
 addProduct(name){
     let newList = this.props.listItems;
-    newList.concat(name);
-   // this.setState({
-     //   listItems: newList
-   // })
+    newList.push(name);
+    alert("added product" + newList);
+    this.setState({
+        listItems: newList
+    })
 }
 
     render(){

@@ -17,7 +17,7 @@ class MealCardList extends React.Component {
 
         return (
             <div className="mealCard">
-                <h1>MealCard in the </h1>
+                <h1>MealCard</h1>
                 <ul>
                     {this.createMeal(0)}
                     {this.createMeal(1)}

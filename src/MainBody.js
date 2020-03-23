@@ -11,18 +11,12 @@ class MainBody extends React.Component {
             productList: ["tomato ","pasta", " salami"]
         }
     }
-
-    addProductToList(name){
-        window.listComponent.addProduct(name);
-    }
+    
 
     handleClickMeal(index) {
         const meals = this.state.mealsList;
         let groceries = meals[index].ingredients;
-        window.listComponent.addProduct("basilikum");
-        alert(groceries);
-
-
+        window.listComponent.addProduct(groceries);
     }
 
     render(){

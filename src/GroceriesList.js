@@ -6,6 +6,7 @@ constructor(props){
     super(props);
     this.state={
         listItems:props.listItems,
+        listWithDuplicates:{}
     }
     window.listComponent = this;
 }
@@ -14,21 +15,27 @@ addProduct(names){
   for(let name of names){
       newList.push(name);
   }
+    let WithDuplicate = {};
+    newList.forEach(function(x) { WithDuplicate[x] = (WithDuplicate[x] || 0)+1; });
     this.setState({
-        listItems: newList
+        listItems: newList,
+        listWithDuplicates:WithDuplicate,
     });
 }
 
     render(){
-        const listItemsCopy = this.state.listItems.map((product) =>
-            <Product name={product}></Product>
-        );
+        const listOfProducts = [];
+        const listWithDuplicatesCopy = this.state.listWithDuplicates;
+        let keys = Object.keys(listWithDuplicatesCopy);
+        for (let key of keys){
+            listOfProducts.push(<Product key = {key} name = {key} amount = {listWithDuplicatesCopy[key]}/>)
+        }
         return(
             <div>
                 <h1>Grocery List</h1>
                 <ul id={"productList"}>
                     <Product name={"test name"}/>
-                    {listItemsCopy}
+                    {listOfProducts}
                 </ul>
             </div>
         )
@@ -37,7 +44,7 @@ addProduct(names){
 }
 
 function Product(props) {
-    return <h2>I am product : {props.name}</h2>;
+    return <li key={props.name}>product: {props.name} amount: {props.amount}</li>;
 }
 
 

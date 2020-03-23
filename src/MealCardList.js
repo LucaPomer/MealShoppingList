@@ -32,9 +32,6 @@ class MealCardList extends React.Component {
 }
 
 class Meal extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (

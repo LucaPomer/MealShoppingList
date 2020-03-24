@@ -37,7 +37,7 @@ class Meal extends React.Component {
 
     render() {
         return <Card bg= "light" className="mealButton">
-            <Card.Img variant="top" src="https://www.budgetbytes.com/wp-content/uploads/2018/10/One-Pot-Creamy-Cajun-Chicken-Pasta-pan-500x500.jpg"/>
+            <Card.Img variant="top" src="img/defaultImage.jpg"/>
             <Card.Body>
                 <Card.Title>{this.props.mealName}</Card.Title>
                 <Card.Text>

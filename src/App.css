@@ -25,7 +25,21 @@
 }
 
 .mealCard h1{
-  color: #1a29ff;
+  color: #6d6d6e;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mealCard Button{
+  font-size: medium;
+}
+
+.groceryList h1{
+  color: #6d6d6e;
+  margin-bottom: 1.5rem;
+}
+.groceryList{
+  margin: 2.5rem 5rem 5rem;
 }
 
 #productList{

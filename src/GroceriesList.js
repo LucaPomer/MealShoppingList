@@ -31,7 +31,7 @@ addProduct(names){
             listOfProducts.push(<Product key = {key} name = {key} amount = {listWithDuplicatesCopy[key]}/>)
         }
         return(
-            <div>
+            <div className={"groceryList"}>
                 <h1>Grocery List</h1>
                 <ListGroup id={"productList"}>
                     {listOfProducts}

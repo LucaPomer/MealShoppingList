@@ -1,6 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
+import Card from "react-bootstrap/Card";
+
 class MealCardList extends React.Component {
 
     createMeal(index) {
@@ -11,7 +13,6 @@ class MealCardList extends React.Component {
             />
         );
     }
-
 
 
     render() {
@@ -35,11 +36,16 @@ class MealCardList extends React.Component {
 class Meal extends React.Component {
 
     render() {
-        return (
-            <div className="mealButton">
-                <Button variant="primary"  onClick={this.props.handleClickMeal}>this meal is {this.props.mealName}</Button>
-            </div>
-        );
+        return <Card bg= "light" className="mealButton">
+            <Card.Img variant="top" src="https://www.budgetbytes.com/wp-content/uploads/2018/10/One-Pot-Creamy-Cajun-Chicken-Pasta-pan-500x500.jpg"/>
+            <Card.Body>
+                <Card.Title>{this.props.mealName}</Card.Title>
+                <Card.Text>
+                    a nice meal
+                </Card.Text>
+                <Button onClick={this.props.handleClickMeal} variant="primary">Add to Groceries</Button>
+            </Card.Body>
+        </Card>;
     }
 }
 

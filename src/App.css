@@ -9,13 +9,33 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-.mealButton Button{
-  margin: 5px;
-  align-content: center;
+.mealCard ul{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /** so that button aligns center **/
+  padding: 0;
 }
+
+/** every meal button **/
+.card{
+  width: 12rem;
+  margin: 4px;
+}
+
 .mealCard h1{
-  text-align: center;
   color: #1a29ff;
+}
+
+#productList{
+  padding: 0;
+  font-size: large;
+  font-style: oblique;
+}
+
+.list-group-item{
+  width: available;
 }
 
 .App-header {
@@ -33,11 +53,3 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

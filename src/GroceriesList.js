@@ -1,5 +1,5 @@
-"use strict"
 import React from 'react';
+import ListGroup from 'react-bootstrap/ListGroup'
 
 class GroceriesList extends React.Component{
 constructor(props){
@@ -33,10 +33,9 @@ addProduct(names){
         return(
             <div>
                 <h1>Grocery List</h1>
-                <ul id={"productList"}>
-                    <Product name={"test name"}/>
+                <ListGroup id={"productList"}>
                     {listOfProducts}
-                </ul>
+                </ListGroup>
             </div>
         )
     }
@@ -44,7 +43,7 @@ addProduct(names){
 }
 
 function Product(props) {
-    return <li key={props.name}>product: {props.name} amount: {props.amount}</li>;
+    return <ListGroup.Item variant="secondary" key={props.name}>{props.amount} x {props.name}  </ListGroup.Item>;
 }
 
 

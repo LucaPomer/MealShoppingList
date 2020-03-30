@@ -8,7 +8,7 @@ class MainBody extends React.Component {
         const mealsJSON = require('./availableMeals.json');
         this.state = {
             mealsList: mealsJSON.mealsList,
-            productList: []
+            productList: {}
         }
     }
 

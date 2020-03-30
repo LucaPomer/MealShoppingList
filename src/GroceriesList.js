@@ -12,30 +12,33 @@ class GroceriesList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            listItems: props.listItems,
-            listWithDuplicates: {}
+            productToAmount: props.listItems,
         }
         window.listComponent = this;
     }
 
     addProduct(names) {
-        let newList = this.state.listItems;
+        let mapCopy = this.state.productToAmount;
         for (let name of names) {
-            newList.push(name);
+            let amount;
+            if(mapCopy.hasOwnProperty(name)){
+                amount = mapCopy[name.toString()];
+                amount++;
+            }
+            else{
+            amount=1;
+            }
+            mapCopy[name.toString()] = amount;
         }
-        let WithDuplicate = {};
-        newList.forEach(function (x) {
-            WithDuplicate[x] = (WithDuplicate[x] || 0) + 1;
-        });
+
         this.setState({
-            listItems: newList,
-            listWithDuplicates: WithDuplicate,
+            productToAmount: mapCopy,
         });
     }
 
     render() {
         const listOfProducts = [];
-        const listWithDuplicatesCopy = this.state.listWithDuplicates;
+        const listWithDuplicatesCopy = this.state.productToAmount;
         let keys = Object.keys(listWithDuplicatesCopy);
         for (let key of keys) {
             listOfProducts.push(<Product key={key} name={key} amount={listWithDuplicatesCopy[key]}/>)

@@ -43,10 +43,21 @@
 }
 #productList{
   list-style-type: none;
+  margin-left: 1rem;
 }
-.productItem {
-  padding: 0 !important;
 
+.productItem #description{
+  padding: 0 !important;
+}
+
+.productItem #removeButton{
+  align-self: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.productItem #addButton{
+  align-self: center;
+  padding-left: 0.5rem;
 }
 
 .list-group-item{

@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/MealShoppingList/static/css/main.fe6e3127.chunk.css",
+    "main.js": "/MealShoppingList/static/js/main.c0529579.chunk.js",
+    "main.js.map": "/MealShoppingList/static/js/main.c0529579.chunk.js.map",
+    "runtime-main.js": "/MealShoppingList/static/js/runtime-main.8bb06ebe.js",
+    "runtime-main.js.map": "/MealShoppingList/static/js/runtime-main.8bb06ebe.js.map",
+    "static/css/2.de424728.chunk.css": "/MealShoppingList/static/css/2.de424728.chunk.css",
+    "static/js/2.14b80a19.chunk.js": "/MealShoppingList/static/js/2.14b80a19.chunk.js",
+    "static/js/2.14b80a19.chunk.js.map": "/MealShoppingList/static/js/2.14b80a19.chunk.js.map",
+    "index.html": "/MealShoppingList/index.html",
+    "precache-manifest.2741bd02187c9929dd448d8410511943.js": "/MealShoppingList/precache-manifest.2741bd02187c9929dd448d8410511943.js",
+    "service-worker.js": "/MealShoppingList/service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "/MealShoppingList/static/css/2.de424728.chunk.css.map",
+    "static/css/main.fe6e3127.chunk.css.map": "/MealShoppingList/static/css/main.fe6e3127.chunk.css.map",
+    "static/js/2.14b80a19.chunk.js.LICENSE.txt": "/MealShoppingList/static/js/2.14b80a19.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8bb06ebe.js",
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.14b80a19.chunk.js",
+    "static/css/main.fe6e3127.chunk.css",
+    "static/js/main.c0529579.chunk.js"
+  ]
+}
